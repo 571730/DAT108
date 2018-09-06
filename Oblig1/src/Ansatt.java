@@ -58,4 +58,15 @@ public class Ansatt {
     public void endreLonn(Function<Integer, Integer> function){
         aarslonn = function.apply(aarslonn);
     }
+
+    @Override
+    public String toString() {
+        return "Ansatt{" +
+                "fornavn='" + fornavn + '\'' +
+                ", etternavn='" + etternavn + '\'' +
+                ", kjonn=" + kjonn +
+                ", stilling='" + stilling + '\'' +
+                ", aarslonn=" + aarslonn +
+                '}';
+    }
 }
