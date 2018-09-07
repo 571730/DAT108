@@ -1,5 +1,6 @@
 import java.util.function.Function;
 
+
 public class Ansatt {
     private String fornavn;
     private String etternavn;
@@ -55,10 +56,18 @@ public class Ansatt {
         this.aarslonn = aarslonn;
     }
 
+    /**
+     * Endrer aarslonn til en ansatt
+     * @param function lambdauttrykk som sier noe om hvordan lonn skal endres
+     */
     public void endreLonn(Function<Integer, Integer> function){
         aarslonn = function.apply(aarslonn);
     }
 
+    /**
+     * Default toString metode
+     * @return streng som representerer en ansatt
+     */
     @Override
     public String toString() {
         return "Ansatt{" +

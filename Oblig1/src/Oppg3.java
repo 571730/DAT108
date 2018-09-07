@@ -1,11 +1,19 @@
 import java.util.function.Function;
 
 public class Oppg3 {
-
+    /**
+     * Oker aarslonn med en gitt prosent
+     * @param prosent gitt som heltall, f.eks 25 er lik 25%
+     * @return lambda fra int til int
+     */
     public static Function<Integer, Integer> okMedProsent(int prosent){
         return x ->   ((x * prosent/100) + x);
     }
 
+    /**
+     * Main som lager ansatte og utforer oking av lonn paa forskjellig vis
+     * @param args ikke i bruk
+     */
     public static void main(String[] args){
         Ansatt ansatt1 = new Ansatt("Mikkel", "Birkeland", 'm', "Leder", 500000);
         Ansatt ansatt2 = new Ansatt("Hans", "Nilsen", 'm', "Vask", 400000);

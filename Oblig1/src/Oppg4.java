@@ -6,13 +6,11 @@ import static java.util.stream.Collectors.toList;
 
 public class Oppg4 {
 
+    /**
+     * Main som lager 6 ansatte objekter og utforer de gitte oppgavene
+     * @param args ikke i bruk
+     */
     public static void main(String[] args) {
-//        Ansatt ansatt1 = new Ansatt("Ola", "Nordmann", 'm', "sjef", 400000);
-//        Ansatt ansatt2 = new Ansatt("Hans", "Hansen", 'm', "arbeider", 300000);
-//        Ansatt ansatt3 = new Ansatt("Kari", "Simonsen", 'k', "arbeider", 300000);
-//        Ansatt ansatt4 = new Ansatt("Lise", "Olsen", 'k', "arbeider", 350000);
-//        Ansatt ansatt5 = new Ansatt("Lotte", "Fransen", 'k', "sjef", 500000);
-//        Ansatt ansatt6 = new Ansatt("Kari", "Kronstad", 'k', "arbeider", 340000);
 
         List<Ansatt> ansattListe = Arrays.asList(
                 new Ansatt("Ola", "Nordmann", 'm', "sjef", 400000),
@@ -22,12 +20,6 @@ public class Oppg4 {
                 new Ansatt("Lotte", "Fransen", 'k', "sjef", 500000),
                 new Ansatt("Kari", "Kronstad", 'k', "arbeider", 340000)
         );
-//        ansattListe.add(ansatt1);
-//        ansattListe.add(ansatt2);
-//        ansattListe.add(ansatt3);
-//        ansattListe.add(ansatt4);
-//        ansattListe.add(ansatt5);
-//        ansattListe.add(ansatt6);
 
         // ---- oppgave a) ----
 
@@ -41,7 +33,8 @@ public class Oppg4 {
 
         // ---- oppgave c) ----
 
-        double resultatC = ansattListe.stream().filter(x -> x.getKjonn() == 'k').collect(Collectors.averagingInt(x -> x.getAarslonn()));
+        double resultatC = ansattListe.stream().filter(x -> x.getKjonn() == 'k')
+                .collect(Collectors.averagingInt(x -> x.getAarslonn()));
         System.out.println("Snittlonn for kvinnene er " + resultatC + "kr");
 
         // ---- oppgave d) ----
